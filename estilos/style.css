@@ -388,7 +388,7 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 
   section#SECniver {
     display: none;
-    background-image: url(../midia/ANIVERSÁRIO_BG.jpg);
+    background-image: url(../midia/ANIVERSÁRIO_BG.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: black; /* Importante manter o background-color: black */
