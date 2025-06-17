@@ -1,0 +1,1195 @@
+
+:root {
+    --cor0: #fdfdfd;
+    --cor1: #bbdeff;
+    --cor2: #829fb3;
+    --cor3: #79c1fc;
+    --cor5: #36a2fa;
+    --cor4: #477eb1;
+    --cor7: #0077ff;
+    --cor6: #235da0;
+    --cor8: #004c8a;
+    --cor9: #2802fd;
+    --cor10: #000000;
+
+
+    --Tcor0: #fdfdfd59;
+    --Tcor1: #ffbbf752;
+    --Tcor2: #b382ad52;
+    --Tcor3: #fc79ed49;
+    --Tcor5: #fa36e357;
+    --Tcor4: #b147a54d;
+    --Tcor7: #ff00e14d;
+    --Tcor6: #a023914b;
+    --Tcor8: #8a007a50;
+    --Tcor9: #fd020252;
+    --Tcor10: #0000009d;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-strong: Anton, Boldonse, Rowdies, Alfa Slab One, Archivo Black,;
+    --fonte-mega-strong: Rubik Mono One, Bungee, Rammetto One, Holtwood One SC, Bowl One SC Bowlby One, Sigmar, Erica One, Seymour One;
+    --fonte-manuscrito: Pinyon Script, Herr Von Muellerhoff, Monsieur La Doulaise, Tilt Warp;
+    --fonte-hand-made: Rochester,  Playwrite Chile Guides, Playwrite España Guides, Playwrite Italia Tradizionale Guides, Plawrite Cuba, Stalemate, Playwrite Brasil;
+    --fonte-destaque: "Bebas Neue", cursive;
+    --fonte-android: "Android", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   /*  box-sizing: border-box; */
+   text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor3);
+    font-weight: bolder;
+}
+
+h1{
+
+}
+
+h2{
+    font-family: var(--fonte-padrao);
+    color: var(--cor2);
+  /*   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.644); */
+    font-size: 2em;
+    text-align: center;
+}
+
+h3{
+    color: var(--cor2);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.575);
+    font-weight: bolder;
+    
+    
+
+
+}
+
+h4{
+    color: var(--cor1);
+    text-align: center;
+   /*  text-shadow: 3px 3px 6px black; */
+    font-weight: bolder;
+   /*  -webkit-text-stroke: 2px black; /* Largura e cor do traçado */ 
+
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+
+h5{
+    color: var(--cor4);
+    text-shadow: 3px 3px 3px solid black;
+}
+
+.entrevistaPAI {
+    display: flex; /* Organiza os filhos em linha (por padrão) */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    /* Outros estilos do pai */
+  }
+  
+  .entrevista {
+    /* Remova position: absolute; */
+   /*  margin-right: 20px; */ /* Espaço entre a imagem e o texto */
+    /* Outros estilos da div da imagem */
+  }
+  
+  .entrevista img {
+    background-color: white;
+   /*  padding: 5px; */
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    /* max-width: 600px; */ /* Defina uma largura máxima para a imagem */
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do pai */
+  }
+
+.album img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    display: block; /* Remove possíveis espaçamentos causados por inline elements */
+}
+
+.lista{
+    padding-top: 20px;
+}
+
+.coluna li a { /* texto interno */
+    color: white;
+
+}
+
+.textoalbum { /* texto título do album */
+    font-size: 1.5em;
+    color: var(--cor10);
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(255, 254, 254, 0.301);
+
+}   
+
+/* CONFIGURAÇÃO HEAD DE CABEÇALHO VISUAL CONTAINER */
+
+
+            /* CSS para o cabeçalho responsivo e slideshow */
+            header {
+                max-width: 800px; /* Limita a largura máxima do header */
+                margin: 0 auto; /* Centraliza o header */
+                width: 100%; /* Garante que o header ocupe a largura total disponível até 800px */
+            }
+
+            .header-visual-container {
+                position: relative;
+                width: 100%;
+                /* Usamos padding-bottom para criar uma altura responsiva baseada na largura.
+                   56.25% é a proporção 16:9. Se suas imagens forem mais quadradas,
+                   tente 75% (4:3) ou 100% (1:1). */
+                padding-bottom: 30%; 
+                height: auto; /* Essencial para que padding-bottom defina a altura */
+                overflow: hidden;
+                background-color: black; /* Cor de fundo para as "barras" se a imagem não preencher */
+            }
+
+            .slideshow-image {
+                position: absolute; /* Para sobrepor as imagens e permitir o fade */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; /* A imagem preenche a área definida pelo padding-bottom do pai */
+                object-fit: contain; /* Redimensiona a imagem para caber sem cortar, adicionando barras se necessário */
+                opacity: 0; /* Todas começam invisíveis */
+                
+                /* Animação: 9s total (3 imagens * (2s visível + 1s transição)) */
+                animation: slideshowFade 9s infinite; 
+            }
+
+            /* Define o atraso para cada imagem */
+            .slideshow-image:nth-child(1) { /* Primeira imagem */
+                animation-delay: 0s;
+            }
+
+            .slideshow-image:nth-child(2) { /* Segunda imagem */
+                animation-delay: 3s; /* Começa a aparecer 3 segundos após o início da primeira */
+            }
+
+            .slideshow-image:nth-child(3) { /* Terceira imagem */
+                animation-delay: 6s; /* Começa a aparecer 6 segundos após o início da primeira */
+            }
+
+            @keyframes slideshowFade {
+                0% { opacity: 0; } /* Início do slot: invisível */
+                11.11% { opacity: 1; } /* Fade-in: 1s (1/9 de 9s) para ficar visível */
+                33.33% { opacity: 1; } /* Permanece visível: até 3s (3/9 de 9s) */
+                44.44% { opacity: 0; } /* Fade-out: 1s (do 3s ao 4s do slot) para desaparecer */
+                100% { opacity: 0; } /* Permanece invisível até o próximo ciclo */
+            }
+
+
+/***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+span.infoboxshow {
+    display: inline;
+    position: relative; /* Define o contêiner como relativo */
+    color: var(--cor3);
+    font-weight: bolder;
+    z-index: 100;
+    
+}
+
+    span.infoboxhiden {
+    display: none; /* Esconde o parágrafo inicialmente */
+    position: fixed; /* Posiciona o parágrafo de forma absoluta */
+    top: 0; /* Ajusta a posição do parágrafo */
+    left: 0;
+    color: white;
+    background-color: var(--cor2);
+    padding: 7px;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: -50px;
+    margin-top: -86px;
+    font-weight: normal;
+    text-align: start;
+    z-index:  99999; /* Garante que o parágrafo apareça acima de outros elementos */
+
+
+}
+
+div#ahyeon span a{color: rgb(26, 26, 238)}
+
+
+/*************** FIM DA CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+/****************************CONFIG CARROCEL*************************/
+
+h2#titulocarrocel {
+    /* background-color: antiquewhite; */
+    color: var(--cor1);
+    /* text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.644); */
+}
+
+
+div#mascara_carrocel{
+    background-color: black;
+    overflow: hidden;
+    width: 100%; 
+    padding: 10px 0 10px 0;
+}
+
+.swiper-container {
+    width: 340px; /* Ajuste a largura conforme necessário */
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+
+div.carrocel_bg {
+    background-color: black;
+    width: 100vwpx;
+    height: auto;
+    padding: 30px;
+ 
+   
+}
+
+/* configurando os botões do carrocel*/
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Posiciona a paginação na parte inferior do carrossel */
+    left: 50%; /* Centraliza a paginação horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para que o centro da paginação coincida com o centro do carrossel */
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Largura dos botões */
+    height: 60px; /* Altura dos botões */
+    background-color: #ffffff8a; /* Cor de fundo dos botões */
+    border-radius: 50%; /* Arredonda os cantos dos botões */
+    color: #000; /* Cor do texto dos botões */
+    font-size: 30px; /* Tamanho da fonte dos botões */
+    text-align: center; /* Centraliza o texto nos botões */
+    cursor: pointer; /* Muda o cursor para mão ao passar o mouse sobre os botões */
+  }
+  
+  .swiper-button-prev {
+    right: calc(100%); /* Posiciona o botão à esquerda do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+  
+  .swiper-button-next {
+    left: calc(100%); /* Posiciona o botão à direita do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+
+/* fim de configurar os botões */
+
+div.swiper-wrapper {
+    display: flex;
+    flex-direction: row; 
+}
+
+.swiper-slide {
+    background: #000000; /* Apenas para visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* inicio da config transição */
+.swiper-slide a img {
+display: inline;
+width: auto;
+height: 300px;
+
+transition: transform 0.9s ease-in-out;
+padding: 10px;
+}
+
+/* configuraçõao do link do carrocel */
+.swiper-slide a {
+    display: block; /* Faz o link ocupar todo o espaço do slide */
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .swiper-slide img {
+    display: block; /* Garante que a imagem também se comporte como bloco dentro do link */
+    width: 100%; /* Faz a imagem ocupar a largura do link */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem deformar (pode variar dependendo do seu layout) */
+  }
+
+  /*fim configuraçõao do link do carrocel*/
+
+/* configura quando esta em foco */
+.swiper-slide-scaled img {
+transform: scale(1.3); /* irá aumentar o tamanho da imagem ativa */
+opacity: 1; /* Garante que a imagem ativa tenha opacidade total de 100% */
+
+
+}
+/* configura quando NÃO esta em foco */
+.swiper-slide:not(.swiper-slide-scaled) img {
+opacity: 0.30; /* Diminui a opacidade para 60% */
+transform: 0.9s ease-in-out;
+transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a opacidade */
+
+
+}
+
+
+.swiper-slide-scaled {
+ z-index: 10; /* Define um z-index GARANTE QUE A IMAGEM FIQUE POR CIMA DAS OUTRAS*/
+ transform: 0.9s ease-in;
+}
+
+/* fin da config transição */
+.swiper-pagination {
+    position: absolute;
+   
+
+ }
+
+/****************************FIM DA CONFIG CARROCEL*************************/
+
+
+
+
+/****************************CONFIG ANIVERSARIO*************************/
+
+/* ... seu CSS anterior ... */
+
+
+  /* ... seu CSS posterior ... */
+
+
+
+  section#SECniver {
+    display: none;
+    background-image: url(../midia/ANIVERSÁRIO_BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black; /* Importante manter o background-color: black */
+    width: 100%;
+    height: 670px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
+}
+
+#fogosVideo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    pointer-events: none; /* Para não impedir cliques nos links abaixo */
+}
+
+div#felizniver {
+    display: none;
+
+}
+
+div#felizniver img{
+    display: block;
+  /*   z-index: 1000; */
+   
+
+
+}
+
+div#felizniver h4 {
+    padding-top: 10px;
+    font-size: 2em;
+
+}
+
+div#DIVniver {
+    display: flex;
+    flex-flow: column;
+    height: 100%;              /* Deixe a altura se ajustar ao conteúdo */
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0px;      /* Espaço no fundo para não colar a última img */
+}
+
+div#DIVniver a {
+    display: block; /* Faz o link ocupar a largura total */
+    text-align: right; /* Alinha o conteúdo (a imagem) à direita */
+    z-index: 2;
+}
+
+div#DIVniver img {
+    display: none;
+    width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
+    max-width: 600px;          /* Mas nunca passa de 300px */
+    padding: 5px 0px 5px 5px;
+   /*  z-index: 200; */
+   /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
+}
+
+
+/* Aumenta espaço apenas na última imagem */
+
+
+
+div#DIVniver img:last-child {
+    
+    margin-bottom: 0;
+}
+
+
+
+/****************************FIM DA CONFIG ANIVERSARIO*************************/
+
+/************************************VEIJAO TAMBEM***************************/
+
+div.centrospan {
+    display: flex;
+
+}
+
+div.centrospan h2 {
+   color: white;
+   font-size: 2em;
+   text-shadow: rgb(255, 255, 255);
+
+}
+
+div#vejatbm{
+    background-color: rgb(218, 136, 190);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px black ;
+
+}
+
+div#vejatbm img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px black ;
+
+}
+
+.imagem-container {
+    position: relative; /* Contêiner para o posicionamento absoluto */
+    width: 100%; /* Opcional: ajuste a largura conforme necessário */
+   
+    margin: 0 auto; /* Opcional: centralizar o contêiner */
+  }
+  
+  .imagem-container img {
+    position: absolute; /* Permite sobrepor as imagens */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* A opacidade inicial será controlada para cada imagem */
+  }
+  
+  .imagem-container .imagem-estatica {
+    opacity: 1; /* Sempre visível */
+    z-index: 1; /* Garante que esteja abaixo da imagem animada inicialmente */
+  }
+  
+  .imagem-container .imagem-animada {
+    opacity: 0; /* Inicialmente invisível */
+    z-index: 2; /* Fica por cima da imagem estática */
+    transition: opacity 10s ease-in-out; /* Transição suave de opacidade em 10 segundos */
+    animation: cicloOpacidade 20s infinite; /* Animação para controlar os tempos de visibilidade */
+  }
+  
+  @keyframes cicloOpacidade {
+    0% {
+      opacity: 0; /* Começa invisível */
+    }
+    40% {
+      opacity: 0; /* Fica totalmente visível após 10 segundos (devido à transição) */
+    }
+    50% {
+        opacity: 1; /* Começa a desaparecer nos próximos 10 segundos (devido à transição no reinício do ciclo) */
+      }
+    90% {
+        opacity: 1; /* Começa a desaparecer nos próximos 10 segundos (devido à transição no reinício do ciclo) */
+    }
+
+  }
+
+  /* animação do texto */
+
+  .imagem-container {
+    position: relative; /* Garante que elementos filhos usem essa referência */
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.texto-animado-container {
+    position: absolute; /* Sobrepondo à imagem */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Superior à imagem animada */
+    text-align: center;
+    width: 100%; /* Para garantir que os textos não fiquem cortados */
+}
+
+.texto-animado {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    animation: fadeInOut 4s infinite;
+}
+  
+
+/*******************************FIM DA VEIJAO TAMBEM*************************/
+video {
+    width: 100%; /* Faz com que o vídeo acompanhe a largura da tela */
+    height: auto; /* Mantém a proporção do vídeo */
+    max-width: 900px; /* Limita a largura máxima do vídeo, se necessário */
+
+  
+}
+/**********************CONFIG BOTÃO DO SOM************************************/
+.sound-button {
+    position: absolute;
+    top: 10px; /* Posiciona o botão no canto do vídeo */
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+    outline: none;
+}
+
+.sound-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+}
+
+/**********************FIM CONFIG BOTÃO DO SOM************************************/
+
+img#substitute-image {
+    display: none;
+     width: 100%;  /* A imagem também será responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+
+    
+
+   /* width: 100vw; /* Garante que ocupe toda a largura da tela */ 
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+}
+
+
+/**************************************CONFIGURAÇÃO DO CLIQUE MÁGICO**********************/
+
+.clique-magico-gif {
+    /* Outros estilos */
+    max-width: 100vw; /* Garante que a largura não exceda a largura da viewport */
+    max-height: 100vh; /* Garante que a altura não exceda a altura da viewport */
+}
+
+/**************************************FIM DA CONFIGURAÇÃO DO CLIQUE MÁGICO**********************/
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../midia/GRUPO_HTML_BG.png');
+    background-size: 100px 100px;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+
+
+    overflow-x: hidden; /* Esconde o que ultrapassa a largura da tela */
+    /* Se você ainda precisar de rolagem vertical: */
+    overflow-y: auto;
+
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header > h1 {
+    border: 1px dotted black;
+    text-shadow: 2px 2px 0px black;
+
+    flex: 0 0 200px;
+    
+
+}
+
+/*********************** configuração do HOME ***********************/
+
+article {
+    background-color:  var(--Tcor10);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+}
+
+    div#artigo{  
+    padding: 10px;
+    background-color: var(--cor10);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+}
+
+div#artigo > p{
+    line-height: 1.5;
+    color: var(--cor2);
+    
+    
+    
+    
+}
+div#artigo > h2 {
+    
+    text-align: center;
+    color: var(--cor2);
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
+}
+
+section.artperg{
+    background-color:var(--cor8);
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+}
+
+.artresp {
+    color: var(--cor2);
+}
+
+picture.poster {
+    width: 300px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+  }
+
+ picture.poster img {
+     width: 100%;
+     height: auto;
+     object-fit: cover; /* Ou contain, fill, etc. */
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.550);
+     border-radius: 10px;
+  }
+
+a.fonte {
+    display: block;
+    text-align: right;
+    color: var(--cor4);
+    
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+/**********************CONFIG MENU************************************/
+
+
+div#menu {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}
+
+div#menu  > nav {
+    border: 1px dotted black;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+div#menu > nav a {
+    background-color:var(--cor7);
+    color: white;
+    padding: 10px;
+    /* width: auto; */ /* Mantém o ajuste da largura */
+   /*  margin: 5px; */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 70px;
+    width: 100%;
+    margin-right: 5px;
+
+
+}
+
+
+
+
+/* Ajuste para telas menores (até 600px) */
+@media (max-width: 600px) {
+
+    div#menu  > nav {
+        border: 1px dotted black;
+    
+        display: flex;
+        justify-content: space-around;
+
+        
+    
+    }
+
+
+div#menu > nav a {
+    /* ... suas propriedades existentes ... */
+    min-width: 40px;
+    padding: 5px 5px 5px 5px;
+    font-size: 0.8em;
+    text-align: center;
+    display: inline-block; /* Importante para que height e padding funcionem como esperado */
+
+    /* Alinhamento Vertical */
+    height: 30px; /* Defina uma altura fixa para o link */
+    line-height: 30px; /* Faça o line-height igual à altura */
+}   
+    
+}
+
+
+
+
+div#menu  > nav a:hover {
+    background-color: white;
+    color: rgb(180, 17, 180);
+    /*  font-weight: bolder; */
+    transition: 0.5s;
+    
+}
+
+/* PARA QUANDO O SCRIPT DO MENU FOR ATIVADO */
+
+#fixo {
+    background-color: black;
+    width: 100%; /* Garante que a largura seja responsiva */
+    /* max-width: 800px; */ /* Define o limite máximo */
+    /*  text-align: center;  */
+    z-index: 10;
+    
+}
+
+#fixo nav {
+    display: flex; /* Organiza os links horizontalmente */
+    justify-content: space-around; /* Espaçamento uniforme entre os links */
+}
+
+#fixo a {
+    width: auto; /* Ajusta a largura automaticamente */
+    max-width: 150px; /* Limita os links responsivamente */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+/* CONF MENU FLUTUANTE */
+
+
+
+.menu-container {
+    position: relative; /* Essencial para posicionar o dropdown-menu em relação a ele */
+    display: inline-block; /* Permite que ele se ajuste ao conteúdo */
+    /* Você pode ajustar a margin-left aqui se quiser mais espaço entre "K-POP" e o ícone ☰ */
+    margin-left: 0px; /* Exemplo de espaçamento */
+}
+
+.menu-icon {
+    height: 30px;
+    margin-right: 5px;
+    font-size: 25px; /* Tamanho do ícone */
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--cor7);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 2; /* Garante que o ícone esteja acima do menu fechado */
+    line-height: 1; /* Ajuda a alinhar o ícone verticalmente */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px; /* Mantém a posição final do lado direito do ícone */
+    background-color: var(--cor0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.445);
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+
+    /* Novas propriedades para esconder e posicionar sem overflow */
+    opacity: 0;
+    visibility: hidden;
+    /* Começa ligeiramente fora do centro, mas *não* para fora da largura da tela */
+    /* Isso permite uma transição suave para a direita sem causar overflow inicial */
+    transform: translateX(0px); /* Começa sem translação horizontal */
+    pointer-events: none; /* Impede interação quando invisível */
+
+    /* Garante uma transição suave para todas as propriedades */
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Ele já está em translateX(0), então não se move na ativação */
+    pointer-events: auto; /* Permite interação quando visível */
+}
+
+.dropdown-menu ul {
+    text-align: left;
+}
+
+/* Regra para o item da lista (<li>) */
+.dropdown-menu > li {
+    padding: 12px 16px;
+    text-align: left; /* Garante que o conteúdo do <li> (que é o <a>) comece à esquerda */
+}
+
+/* Regra para o link (<a>) dentro do item da lista */
+.dropdown-menu > li > a {
+    color: black;
+    text-decoration: none;
+    display: block; /* Faz o <a> preencher todo o <li> para a área de clique */
+    transition: background-color 0.2s ease;
+    text-align: left; /* Alinha o texto DENTRO do <a> */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #9dbfe6;
+}
+
+
+
+
+/**********************FIM CONFIG MENU************************************/
+
+
+
+body{
+    
+    background-attachment: fixed;
+
+
+    overflow-x: hidden; /* Esconde o que ultrapassa a largura da tela */
+    /* Se você ainda precisar de rolagem vertical: */
+    overflow-y: auto;
+
+}    
+
+
+div#centro{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+main {
+    background-color: var(--Tcor10);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+    max-width: 800px;
+    display: flex; /* Adiciona flexbox ao main */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    justify-content: space-around; /* Alinha os itens no início */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+
+
+
+/**********************CONFIG LISTA do ALBUM************************************/
+/* confi sub item */
+ul > li > ul {
+    display: none; /* Oculta os subitens inicialmente */
+}
+
+ul > li > ul.show {
+    display: block; /* Mostra os subitens quando a classe "show" é adicionada */
+    
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.youtube-icon {
+    height: 1em; /* Define a altura igual ao tamanho da fonte */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+
+
+/* fim confi sub item */
+
+.listas {
+    display: flex; /* Torna o container flexível */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.coluna {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o espaçamento interno */
+    width: 100%; /* Divide o espaço igualmente entre as colunas */
+}
+
+
+
+main.homemain {
+    background-color: var(--Tcor10);
+}
+
+.ARTnormal{
+    background-color: var(--cor10);
+
+}
+
+.coluna li { /* lista primaria */
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os itens */
+    background-color: var(--cor10); /* Cor de fundo para destacar */
+    color: var(--cor3); /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    text-align: left; /* Centraliza o texto */
+    text-shadow: 2px 2px 2px black;
+   
+}
+
+.coluna > li:hover {  /* lista primaria */
+    background-color:var(--cor3);
+    color: var(--cor10);
+    transition: 0.5s;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+
+.coluna li > ul > li { /* lista secundaria expandida */
+    background-color: var(--cor6);
+
+}
+
+.coluna li > ul > li:hover { /* lista secundaria expandida */
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+
+}
+
+
+
+li  a {
+    text-decoration: none;
+}
+
+
+img#letra {
+    width: 25px;
+    height: 25px;
+}
+
+/*********************************FIM DA CONFIGURAÇÃO DA LISTA DO ALBUM  */ 
+
+footer, footer a {
+    text-align: center;
+    color: var(--cor2);
+    text-shadow: 1px 1px 3px black;
+}
+
+/****************************** CONFIGURAÇÃO DO PERFIL********************************/
+
+
+div.perfil {
+    width: 375px;
+    height: 600px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    background-attachment: scroll;
+    position: relative; /* Adicionado */
+    /* margin: 10px; */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
+   /*  z-index: 10; */
+    
+}
+
+
+div.grupo {
+    
+    position: absolute; /* Adiciona posicionamento absoluto */
+    bottom: 5px;      /* Define a distância de 10px da parte inferior */
+    left: 5px;        /* Opcional: alinha à esquerda com a margem */
+    right: 5px;       /* Opcional: alinha à direita com a margem */
+
+    margin: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #00000085;
+
+    font-weight: normal;
+    color: white;
+  
+  }
+  
+
+div > h2{
+    margin: 5px;
+    font-size: 3em;
+/*     text-shadow: 0px 0px 3px rgb(0, 0, 0); */
+    font-weight: bolder;
+   /*  color: var(--cor2); */
+   color: var(--cor6);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+
+p.brasil{
+    color: green;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.541);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+    
+}
+
+
+/* configuração de redes sociais  */
+
+.redes-sociais { /* Aplicamos o estilo ao parágrafo pai */
+  text-align: right;
+  /* Você pode adicionar um espaçamento entre os links se quiser, por exemplo: */
+  /* gap: 10px; - para usar com flexbox, veja a opção 2 */
+}
+
+a.rsocial {
+  /* Remova 'float: left;', 'display: block;' e 'text-align: right;' daqui */
+  /* Eles estão causando o problema e não são necessários para este alinhamento */
+  color: #a82f9e;
+  font-weight: bolder;
+  margin-left: 10px; /* Adiciona um espaço entre os links, empurrando o da esquerda para a direita */
+}
+
+/* fim configuração de redes sociais  */
+
+section#perfil div{
+    display: block;
+    /* z-index: 10; */
+   
+
+}
+
+#perfil-hongjoong {
+    background-image: url('../midia/Hongjoong_PERFIL_BG.jpg');
+}
+
+#perfil-mingi {
+    background-image: url('../midia/Mingi_PERFIL_BG.jpg');
+}
+
+#perfil-san {
+    background-image: url('../midia/San_PERFIL_BG.jpg');
+}
+
+#perfil-seonghwa {
+    background-image: url('../midia/Seonghwa_PERFIL_BG.jpg');
+}
+
+#perfil-wooyoung {
+    background-image: url('../midia/Wooyoung_PERFIL_BG.jpg');
+}
+
+#perfil-yeosang {
+    background-image: url('../midia/Yeosang_PERFIL_BG.jpg');
+}
+
+#perfil-yunho {
+    background-image: url('../midia/Yunho_PERFIL_BG.jpg');
+}
+
+#perfil-jongho {
+    background-image: url('../midia/JONGHO_PERFIL_BG.jpg');
+}
+
+
+
+
+
+
+
+/**********************FIM CONFIG LISTA************************************/
+
+/* @media screen and (max-width: 580px) {
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+
+    header > h1 {
+        flex-basis: 50px
+    }
+
+    header > nav > a {
+        width: 60vw;
+    }
+
+} */
