@@ -26,8 +26,8 @@ document.addEventListener('click', function (event) {
     // Define um 'zIndex' alto para garantir que o GIF apareça acima de outros elementos.
     gifElement.style.pointerEvents = 'none';
     // Impede que o GIF interaja com eventos do mouse (cliques, etc.).
-    gifElement.style.width = '150px';   // Define a largura do GIF no clique.
-    gifElement.style.height = '150px';  // Define a altura do GIF no clique.
+    gifElement.style.width = '100px';   // Define a largura do GIF no clique.
+    gifElement.style.height = '100px';  // Define a altura do GIF no clique.
 
     document.body.appendChild(gifElement);
     // Adiciona o elemento de imagem (o GIF) como um filho do elemento `<body>` do documento.
@@ -97,8 +97,8 @@ function criarTrilhaMagicaDesktop(x, y) {
     // Garante que o GIF fique acima de outros elementos.
     gifElement.style.pointerEvents = 'none';
     // Impede a interação do GIF com eventos do mouse.
-    gifElement.style.width = '90px';    // Define a largura do GIF ao arrastar (desktop).
-    gifElement.style.height = '90px';   // Define a altura do GIF ao arrastar (desktop).
+    gifElement.style.width = '130px';    // Define a largura do GIF ao arrastar (desktop).
+    gifElement.style.height = '130px';   // Define a altura do GIF ao arrastar (desktop).
     
     document.body.appendChild(gifElement);
     // Adiciona o GIF ao corpo do documento.
@@ -221,8 +221,8 @@ function criarTrilhaMagicaMobile(clientX, clientY) {
     // Garante que o GIF fique acima de outros elementos.
     gifElement.style.pointerEvents = 'none';
     // Impede a interação do GIF com eventos de toque.
-    gifElement.style.width = '80px';    // Define a largura do GIF ao arrastar (mobile).
-    gifElement.style.height = '80px';   // Define a altura do GIF ao arrastar (mobile).
+    gifElement.style.width = '130px';    // Define a largura do GIF ao arrastar (mobile).
+    gifElement.style.height = '130px';   // Define a altura do GIF ao arrastar (mobile).
 
     document.body.appendChild(gifElement);
     // Adiciona o GIF ao corpo do documento.
