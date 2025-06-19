@@ -14,15 +14,15 @@
 
 
     --Tcor0: #fdfdfd59;
-    --Tcor1: #ffbbf752;
-    --Tcor2: #b382ad52;
-    --Tcor3: #fc79ed49;
-    --Tcor5: #fa36e357;
-    --Tcor4: #b147a54d;
-    --Tcor7: #ff00e14d;
-    --Tcor6: #a023914b;
-    --Tcor8: #8a007a50;
-    --Tcor9: #fd020252;
+    --Tcor1: #bbe4ff52;
+    --Tcor2: #82a5b352;
+    --Tcor3: #79c8fc49;
+    --Tcor5: #368bfa57;
+    --Tcor4: #4775b14d;
+    --Tcor7: #008cff4d;
+    --Tcor6: #2359a04b;
+    --Tcor8: #00478a50;
+    --Tcor9: #0277fd52;
     --Tcor10: #0000009d;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
@@ -237,10 +237,11 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 
 /****************************CONFIG CARROCEL*************************/
 
-h2#titulocarrocel {
-    /* background-color: antiquewhite; */
+h3#titulocarrocel {
+    height: auto;
     color: var(--cor1);
     /* text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.644); */
+    margin: 0px 5px 10px 5px;
 }
 
 
@@ -248,8 +249,45 @@ div#mascara_carrocel{
     background-color: black;
     overflow: hidden;
     width: 100%; 
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
 }
+
+
+
+/* link da lista do youtube container-float */
+
+  .container-float {
+    overflow: auto; /* Garante que o container se ajuste ao conteúdo flutuante */
+    background-color: var(--Tcor5);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .container-float a {
+  
+
+  }
+
+  .youtube-icon-float {
+    float: left;
+    margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    margin-top: 5px;
+    width: 40px;  /* Define a largura do ícone para 32 pixels */
+    height: 30px; /* Define a altura do ícone para 32 pixels */
+  }
+
+  /* Estilos para o seu link e texto existentes */
+  .linkh3 {
+    font-size: 0.8em; /* Exemplo de estilo */
+   color: var(--cor5);
+    text-decoration: none; /* Exemplo de estilo */
+    display: inline; /* Garante que o h4 se comporte como parte do texto */
+  }
+
+
+/* fim link da lista do youtube container-float*/
+
 
 .swiper-container {
     width: 340px; /* Ajuste a largura conforme necessário */
