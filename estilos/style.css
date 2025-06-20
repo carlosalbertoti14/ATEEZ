@@ -134,10 +134,10 @@ h5{
 
 .textoalbum { /* texto título do album */
     font-size: 1.5em;
-    color: var(--cor10);
+    color: var(--cor3);
     font-weight: bolder;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(255, 254, 254, 0.301);
+    text-shadow: 1px 1px 3px rgba(3, 3, 3, 0.301);
 
 }   
 
