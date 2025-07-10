@@ -7,17 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let encontrouAniversariante = false;
     let encontrouAniversarianteDoDia = false;
 
-    const nivernome = [
-        { nome: "NAYEON", url: "url('midia/twice_PERFIL_BG_Nayeon.jpg')" },
-        { nome: "JEONGYEON", url: "url('midia/twice_PERFIL_BG_Jeongyeon.jpg')" },
-        { nome: "MOMO", url: "url('midia/twice_PERFIL_BG_Momo.jpg')" },
-        { nome: "SANA", url: "url('midia/twice_PERFIL_BG_Sana.jpg')" },
-        { nome: "JIHYO", url: "url('midia/twice_PERFIL_BG_Jihyo.jpg')" },
-        { nome: "MINA", url: "url('midia/twice_PERFIL_BG_Mina.jpg')" },
-        { nome: "DAHYUN", url: "url('midia/twice_PERFIL_BG_Dahyun.jpg')" },
-        { nome: "CHAEYOUNG", url: "url('midia/twice_PERFIL_BG_Chaeyoung.jpg')" },
-        { nome: "TZUYU", url: "url('midia/twice_PERFIL_BG_Tzuyu.jpg')" }
-    ];
+const nivernome = [
+    { nome: "YUNHO", url: "url('midia/Yunho_PERFIL_BG.jpg')" },
+    { nome: "SEONGHWA", url: "url('midia/Seonghwa_PERFIL_BG.jpg')" },
+    { nome: "YEOSANG", url: "url('midia/Yeosang_PERFIL_BG.jpg')" },
+    { nome: "SAN", url: "url('midia/San_PERFIL_BG.jpg')" }, // Adicionado San e seu BG
+    { nome: "MINGI", url: "url('midia/Mingi_PERFIL_BG.jpg')" },
+    { nome: "JONGHO", url: "url('midia/Jongho_PERFIL_BG.jpg')" },
+    { nome: "HONGJOONG", url: "url('midia/Hongjoong_PERFIL_BG.jpg')" },
+    { nome: "WOOYOUNG", url: "url('midia/Wooyoung_PERFIL_BG.jpg')" }
+];
 
     const secNiver = document.getElementById("SECniver");
     const divNiver = document.getElementById("DIVniver");
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         mensagemAniversarioDiv.style.display = "block";
                     }
                     if (fogosVideo) {
-                        fogosVideo.style.display = "block"; // Mostra o vídeo de fogos
+                        fogosVideo.style.display = "block"; // Isso deve ser o suficiente para mostrar o vídeo agora
                     }
                     img.style.display = "block";
                     encontrouAniversarianteDoDia = true;

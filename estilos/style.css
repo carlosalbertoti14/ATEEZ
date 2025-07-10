@@ -438,7 +438,7 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 }
 
 #fogosVideo {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -447,10 +447,11 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
     object-fit: cover;
     mix-blend-mode: screen;
     pointer-events: none; /* Para não impedir cliques nos links abaixo */
+    
 }
 
 div#felizniver {
-    display: none;
+    display: block;
 
 }
 
@@ -481,15 +482,23 @@ div#DIVniver {
 div#DIVniver a {
     display: block; /* Faz o link ocupar a largura total */
     text-align: right; /* Alinha o conteúdo (a imagem) à direita */
-    z-index: 2;
+    z-index: 2;   
 }
+
+div#DIVniver a img {
+   margin-left: auto;
+    text-align: right; /* Alinha o conteúdo (a imagem) à direita */
+    z-index: 2;   
+
+}
+
 
 div#DIVniver img {
     display: none;
     width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
     max-width: 600px;          /* Mas nunca passa de 300px */
     padding: 5px 0px 5px 5px;
-   /*  z-index: 200; */
+       /*  z-index: 200; */
    /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
 }
 
@@ -500,7 +509,7 @@ div#DIVniver img {
 
 div#DIVniver img:last-child {
     
-    margin-bottom: 0;
+   /*  margin-bottom: 0; */
 }
 
 

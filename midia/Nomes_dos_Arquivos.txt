@@ -1,6 +1,6 @@
 ALBUM_BEYOND_ZERO.jpg
 ALBUM_Birthday.jpg
-ALBUM_GOLDEN_HOUR_ Part_2.jpg
+ALBUM_GOLDEN_HOUR_Part_2.jpg
 ALBUM_GOLDEN_HOUR_Part_3.jpg
 ALBUM_Into_the_A_to_Z.jpg
 ALBUM_SINGLES_SONGS.jpg
@@ -11,7 +11,7 @@ ALBUM_TREASURE_EP_FIN_All_To_Action.jpg
 ALBUM_ZERO_FEVER_EPILOGUE.jpg
 ALBUM_ZERO_FEVER_Part_1.jpg
 ALBUM_ZERO_FEVER_Part_2.jpg
-ANIVERSµRIO_BG.jpg
+ANIVERSµRIO_BG.png
 ANSWER_CARROCEL.jpg
 babymonsterGROUP.jpg
 babymonster_poster.jpg
@@ -27,6 +27,8 @@ GRUPO_head.jpg
 GRUPO_HTML_BG.png
 GRUPO_interview_LOGO.jpg
 Hongjoong_PERFIL_BG.jpg
+ICE_ON_MY_TEETH_CARROCEL.jpg
+JONGHO_PERFIL_BG.jpg
 listar_arquivos.bat
 LISTA_LOGO_ORIGINAL.png
 LOGO_KQ.png
@@ -51,4 +53,3 @@ Yeosang_PERFIL_BG.jpg
 YOUTUBE_LOGO_ORIGINAL.png
 YOUTUBE_LOGO_ROUND.png
 Yunho_PERFIL_BG.jpg
-~$ACKPINK_ALBUM_LIST.rtf
